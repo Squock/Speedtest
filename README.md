@@ -3,6 +3,7 @@
 Приложение для измерения скорости интернета 
 Dependencies:
 1) Alamofire
+
 UI:
 1) SwiftUI
 
