@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22086E3F2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22086E3D2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld */; };
+		22120DC12BC6E8750011B633 /* SpeedtestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DC02BC6E8750011B633 /* SpeedtestApp.swift */; };
+		22120DC32BC6E8750011B633 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DC22BC6E8750011B633 /* MainContentView.swift */; };
+		22120DC52BC6E8760011B633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22120DC42BC6E8760011B633 /* Assets.xcassets */; };
+		22120DC82BC6E8760011B633 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22120DC72BC6E8760011B633 /* Preview Assets.xcassets */; };
+		22120DD22BC6E8760011B633 /* SpeedtestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DD12BC6E8760011B633 /* SpeedtestTests.swift */; };
+		22120DDC2BC6E8760011B633 /* SpeedtestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DDB2BC6E8760011B633 /* SpeedtestUITests.swift */; };
+		22120DDE2BC6E8760011B633 /* SpeedtestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DDD2BC6E8760011B633 /* SpeedtestUITestsLaunchTests.swift */; };
+		22120DEB2BC6F3750011B633 /* SpeedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DEA2BC6F3750011B633 /* SpeedContentView.swift */; };
+		22120DEF2BC6F4CA0011B633 /* SettingsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DEE2BC6F4CA0011B633 /* SettingsContentView.swift */; };
+		22120DF22BC72C610011B633 /* SpeedometrContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DF12BC72C610011B633 /* SpeedometrContentView.swift */; };
+		225AE7DF2BCD2E57005C95F8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225AE7DE2BCD2E57005C95F8 /* ResultView.swift */; };
+		225AE7E12BCD2EB5005C95F8 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */; };
+		22B064402BC85A4F00393759 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22B0643F2BC85A4F00393759 /* Alamofire */; };
+		22B064422BC85A4F00393759 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 22B064412BC85A4F00393759 /* AlamofireDynamic */; };
+		22B064442BC85B3E00393759 /* SpeedometrViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064432BC85B3E00393759 /* SpeedometrViewModel.swift */; };
+		22B064462BC85C9A00393759 /* NetworkSpeedRepositoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064452BC85C9A00393759 /* NetworkSpeedRepositoryDataSource.swift */; };
+		22B064482BCA6CC400393759 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064472BCA6CC400393759 /* SettingsViewModel.swift */; };
+		22B0644D2BCBDA1B00393759 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0644C2BCBDA1B00393759 /* SettingsStore.swift */; };
+		22B0644F2BCBDB1400393759 /* SpeedtestAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0644E2BCBDB1400393759 /* SpeedtestAppViewModel.swift */; };
+		22B064512BCC1B4C00393759 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064502BCC1B4C00393759 /* DataManager.swift */; };
+		22B064532BCCF22100393759 /* DataManagerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064522BCCF22100393759 /* DataManagerRepository.swift */; };
+		22B064552BCCF29000393759 /* SettingsStoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B064542BCCF29000393759 /* SettingsStoreRepository.swift */; };
+		22E4F79B2BC7F2CC00041AB5 /* StartButtonContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F79A2BC7F2CC00041AB5 /* StartButtonContentView.swift */; };
+		22E4F79D2BC7F4EE00041AB5 /* SpeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F79C2BC7F4EE00041AB5 /* SpeedViewModel.swift */; };
+		22E4F79F2BC7FB7700041AB5 /* SpeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F79E2BC7FB7700041AB5 /* SpeedFactory.swift */; };
+		22E4F7A12BC8171800041AB5 /* StartButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F7A02BC8171800041AB5 /* StartButtonViewModel.swift */; };
+		22E4F7A32BC817BB00041AB5 /* StartButtonLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F7A22BC817BB00041AB5 /* StartButtonLocalization.swift */; };
+		22E4F7A52BC822FF00041AB5 /* SpeedLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F7A42BC822FF00041AB5 /* SpeedLocalization.swift */; };
+		22E4F7A72BC854CA00041AB5 /* MainLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F7A62BC854CA00041AB5 /* MainLocalization.swift */; };
+		22E4F7AA2BC8556F00041AB5 /* NetworkSpeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4F7A92BC8556F00041AB5 /* NetworkSpeedRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22120DCE2BC6E8760011B633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22120DB52BC6E8750011B633 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22120DBC2BC6E8750011B633;
+			remoteInfo = Speedtest;
+		};
+		22120DD82BC6E8760011B633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22120DB52BC6E8750011B633 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22120DBC2BC6E8750011B633;
+			remoteInfo = Speedtest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22086E3E2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedtestDataModel.xcdatamodel; sourceTree = "<group>"; };
+		22120DBD2BC6E8750011B633 /* Speedtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speedtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22120DC02BC6E8750011B633 /* SpeedtestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestApp.swift; sourceTree = "<group>"; };
+		22120DC22BC6E8750011B633 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		22120DC42BC6E8760011B633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22120DC72BC6E8760011B633 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22120DCD2BC6E8760011B633 /* SpeedtestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedtestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22120DD12BC6E8760011B633 /* SpeedtestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestTests.swift; sourceTree = "<group>"; };
+		22120DD72BC6E8760011B633 /* SpeedtestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedtestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22120DDB2BC6E8760011B633 /* SpeedtestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestUITests.swift; sourceTree = "<group>"; };
+		22120DDD2BC6E8760011B633 /* SpeedtestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22120DEA2BC6F3750011B633 /* SpeedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedContentView.swift; sourceTree = "<group>"; };
+		22120DEE2BC6F4CA0011B633 /* SettingsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentView.swift; sourceTree = "<group>"; };
+		22120DF12BC72C610011B633 /* SpeedometrContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometrContentView.swift; sourceTree = "<group>"; };
+		225AE7DE2BCD2E57005C95F8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		22B064432BC85B3E00393759 /* SpeedometrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometrViewModel.swift; sourceTree = "<group>"; };
+		22B064452BC85C9A00393759 /* NetworkSpeedRepositoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpeedRepositoryDataSource.swift; sourceTree = "<group>"; };
+		22B064472BCA6CC400393759 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		22B0644C2BCBDA1B00393759 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		22B0644E2BCBDB1400393759 /* SpeedtestAppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestAppViewModel.swift; sourceTree = "<group>"; };
+		22B064502BCC1B4C00393759 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		22B064522BCCF22100393759 /* DataManagerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerRepository.swift; sourceTree = "<group>"; };
+		22B064542BCCF29000393759 /* SettingsStoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreRepository.swift; sourceTree = "<group>"; };
+		22E4F79A2BC7F2CC00041AB5 /* StartButtonContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonContentView.swift; sourceTree = "<group>"; };
+		22E4F79C2BC7F4EE00041AB5 /* SpeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewModel.swift; sourceTree = "<group>"; };
+		22E4F79E2BC7FB7700041AB5 /* SpeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedFactory.swift; sourceTree = "<group>"; };
+		22E4F7A02BC8171800041AB5 /* StartButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonViewModel.swift; sourceTree = "<group>"; };
+		22E4F7A22BC817BB00041AB5 /* StartButtonLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonLocalization.swift; sourceTree = "<group>"; };
+		22E4F7A42BC822FF00041AB5 /* SpeedLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLocalization.swift; sourceTree = "<group>"; };
+		22E4F7A62BC854CA00041AB5 /* MainLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLocalization.swift; sourceTree = "<group>"; };
+		22E4F7A92BC8556F00041AB5 /* NetworkSpeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpeedRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22120DBA2BC6E8750011B633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B064402BC85A4F00393759 /* Alamofire in Frameworks */,
+				22B064422BC85A4F00393759 /* AlamofireDynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DCA2BC6E8760011B633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DD42BC6E8760011B633 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22120DB42BC6E8750011B633 = {
+			isa = PBXGroup;
+			children = (
+				22086E3D2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld */,
+				22120DBF2BC6E8750011B633 /* Speedtest */,
+				22120DD02BC6E8760011B633 /* SpeedtestTests */,
+				22120DDA2BC6E8760011B633 /* SpeedtestUITests */,
+				22120DBE2BC6E8750011B633 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22120DBE2BC6E8750011B633 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22120DBD2BC6E8750011B633 /* Speedtest.app */,
+				22120DCD2BC6E8760011B633 /* SpeedtestTests.xctest */,
+				22120DD72BC6E8760011B633 /* SpeedtestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22120DBF2BC6E8750011B633 /* Speedtest */ = {
+			isa = PBXGroup;
+			children = (
+				22B0644E2BCBDB1400393759 /* SpeedtestAppViewModel.swift */,
+				22B064492BCBD9CD00393759 /* Service */,
+				22120DC02BC6E8750011B633 /* SpeedtestApp.swift */,
+				22120DED2BC6F49C0011B633 /* Settings */,
+				22120DEC2BC6F4930011B633 /* SpeedTest */,
+				22120DC22BC6E8750011B633 /* MainContentView.swift */,
+				22120DC42BC6E8760011B633 /* Assets.xcassets */,
+				22120DC62BC6E8760011B633 /* Preview Content */,
+				22E4F7A62BC854CA00041AB5 /* MainLocalization.swift */,
+			);
+			path = Speedtest;
+			sourceTree = "<group>";
+		};
+		22120DC62BC6E8760011B633 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				22120DC72BC6E8760011B633 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22120DD02BC6E8760011B633 /* SpeedtestTests */ = {
+			isa = PBXGroup;
+			children = (
+				22120DD12BC6E8760011B633 /* SpeedtestTests.swift */,
+			);
+			path = SpeedtestTests;
+			sourceTree = "<group>";
+		};
+		22120DDA2BC6E8760011B633 /* SpeedtestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22120DDB2BC6E8760011B633 /* SpeedtestUITests.swift */,
+				22120DDD2BC6E8760011B633 /* SpeedtestUITestsLaunchTests.swift */,
+			);
+			path = SpeedtestUITests;
+			sourceTree = "<group>";
+		};
+		22120DEC2BC6F4930011B633 /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				225AE7DD2BCD2E33005C95F8 /* ResultView */,
+				22E4F7A82BC8554400041AB5 /* NetworkSpeedRepository */,
+				22E4F7992BC7F29D00041AB5 /* StartButton */,
+				22120DF02BC72C430011B633 /* Speedometr */,
+				22120DEA2BC6F3750011B633 /* SpeedContentView.swift */,
+				22E4F79C2BC7F4EE00041AB5 /* SpeedViewModel.swift */,
+				22E4F79E2BC7FB7700041AB5 /* SpeedFactory.swift */,
+				22E4F7A42BC822FF00041AB5 /* SpeedLocalization.swift */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		22120DED2BC6F49C0011B633 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				22120DEE2BC6F4CA0011B633 /* SettingsContentView.swift */,
+				22B064472BCA6CC400393759 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		22120DF02BC72C430011B633 /* Speedometr */ = {
+			isa = PBXGroup;
+			children = (
+				22120DF12BC72C610011B633 /* SpeedometrContentView.swift */,
+				22B064432BC85B3E00393759 /* SpeedometrViewModel.swift */,
+			);
+			path = Speedometr;
+			sourceTree = "<group>";
+		};
+		225AE7DD2BCD2E33005C95F8 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				225AE7DE2BCD2E57005C95F8 /* ResultView.swift */,
+				225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */,
+			);
+			path = ResultView;
+			sourceTree = "<group>";
+		};
+		22B064492BCBD9CD00393759 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				22B0644C2BCBDA1B00393759 /* SettingsStore.swift */,
+				22B064502BCC1B4C00393759 /* DataManager.swift */,
+				22B064522BCCF22100393759 /* DataManagerRepository.swift */,
+				22B064542BCCF29000393759 /* SettingsStoreRepository.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		22E4F7992BC7F29D00041AB5 /* StartButton */ = {
+			isa = PBXGroup;
+			children = (
+				22E4F79A2BC7F2CC00041AB5 /* StartButtonContentView.swift */,
+				22E4F7A02BC8171800041AB5 /* StartButtonViewModel.swift */,
+				22E4F7A22BC817BB00041AB5 /* StartButtonLocalization.swift */,
+			);
+			path = StartButton;
+			sourceTree = "<group>";
+		};
+		22E4F7A82BC8554400041AB5 /* NetworkSpeedRepository */ = {
+			isa = PBXGroup;
+			children = (
+				22E4F7A92BC8556F00041AB5 /* NetworkSpeedRepository.swift */,
+				22B064452BC85C9A00393759 /* NetworkSpeedRepositoryDataSource.swift */,
+			);
+			path = NetworkSpeedRepository;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22120DBC2BC6E8750011B633 /* Speedtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22120DE12BC6E8760011B633 /* Build configuration list for PBXNativeTarget "Speedtest" */;
+			buildPhases = (
+				22120DB92BC6E8750011B633 /* Sources */,
+				22120DBA2BC6E8750011B633 /* Frameworks */,
+				22120DBB2BC6E8750011B633 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Speedtest;
+			packageProductDependencies = (
+				22B0643F2BC85A4F00393759 /* Alamofire */,
+				22B064412BC85A4F00393759 /* AlamofireDynamic */,
+			);
+			productName = Speedtest;
+			productReference = 22120DBD2BC6E8750011B633 /* Speedtest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22120DCC2BC6E8760011B633 /* SpeedtestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22120DE42BC6E8760011B633 /* Build configuration list for PBXNativeTarget "SpeedtestTests" */;
+			buildPhases = (
+				22120DC92BC6E8760011B633 /* Sources */,
+				22120DCA2BC6E8760011B633 /* Frameworks */,
+				22120DCB2BC6E8760011B633 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22120DCF2BC6E8760011B633 /* PBXTargetDependency */,
+			);
+			name = SpeedtestTests;
+			productName = SpeedtestTests;
+			productReference = 22120DCD2BC6E8760011B633 /* SpeedtestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22120DD62BC6E8760011B633 /* SpeedtestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22120DE72BC6E8760011B633 /* Build configuration list for PBXNativeTarget "SpeedtestUITests" */;
+			buildPhases = (
+				22120DD32BC6E8760011B633 /* Sources */,
+				22120DD42BC6E8760011B633 /* Frameworks */,
+				22120DD52BC6E8760011B633 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22120DD92BC6E8760011B633 /* PBXTargetDependency */,
+			);
+			name = SpeedtestUITests;
+			productName = SpeedtestUITests;
+			productReference = 22120DD72BC6E8760011B633 /* SpeedtestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22120DB52BC6E8750011B633 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					22120DBC2BC6E8750011B633 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					22120DCC2BC6E8760011B633 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 22120DBC2BC6E8750011B633;
+					};
+					22120DD62BC6E8760011B633 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 22120DBC2BC6E8750011B633;
+					};
+				};
+			};
+			buildConfigurationList = 22120DB82BC6E8750011B633 /* Build configuration list for PBXProject "Speedtest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22120DB42BC6E8750011B633;
+			packageReferences = (
+				22FD449A2BC859BD006E50C8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 22120DBE2BC6E8750011B633 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22120DBC2BC6E8750011B633 /* Speedtest */,
+				22120DCC2BC6E8760011B633 /* SpeedtestTests */,
+				22120DD62BC6E8760011B633 /* SpeedtestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22120DBB2BC6E8750011B633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22120DC82BC6E8760011B633 /* Preview Assets.xcassets in Resources */,
+				22120DC52BC6E8760011B633 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DCB2BC6E8760011B633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DD52BC6E8760011B633 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22120DB92BC6E8750011B633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E4F7AA2BC8556F00041AB5 /* NetworkSpeedRepository.swift in Sources */,
+				22120DEB2BC6F3750011B633 /* SpeedContentView.swift in Sources */,
+				225AE7DF2BCD2E57005C95F8 /* ResultView.swift in Sources */,
+				22120DC32BC6E8750011B633 /* MainContentView.swift in Sources */,
+				22086E3F2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld in Sources */,
+				22120DC12BC6E8750011B633 /* SpeedtestApp.swift in Sources */,
+				22B0644D2BCBDA1B00393759 /* SettingsStore.swift in Sources */,
+				22120DF22BC72C610011B633 /* SpeedometrContentView.swift in Sources */,
+				22120DEF2BC6F4CA0011B633 /* SettingsContentView.swift in Sources */,
+				22B064462BC85C9A00393759 /* NetworkSpeedRepositoryDataSource.swift in Sources */,
+				22E4F79B2BC7F2CC00041AB5 /* StartButtonContentView.swift in Sources */,
+				22E4F7A52BC822FF00041AB5 /* SpeedLocalization.swift in Sources */,
+				22B064442BC85B3E00393759 /* SpeedometrViewModel.swift in Sources */,
+				22B064532BCCF22100393759 /* DataManagerRepository.swift in Sources */,
+				22B064552BCCF29000393759 /* SettingsStoreRepository.swift in Sources */,
+				22B0644F2BCBDB1400393759 /* SpeedtestAppViewModel.swift in Sources */,
+				22E4F7A72BC854CA00041AB5 /* MainLocalization.swift in Sources */,
+				22E4F79F2BC7FB7700041AB5 /* SpeedFactory.swift in Sources */,
+				22B064512BCC1B4C00393759 /* DataManager.swift in Sources */,
+				225AE7E12BCD2EB5005C95F8 /* ResultViewModel.swift in Sources */,
+				22E4F79D2BC7F4EE00041AB5 /* SpeedViewModel.swift in Sources */,
+				22E4F7A12BC8171800041AB5 /* StartButtonViewModel.swift in Sources */,
+				22E4F7A32BC817BB00041AB5 /* StartButtonLocalization.swift in Sources */,
+				22B064482BCA6CC400393759 /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DC92BC6E8760011B633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22120DD22BC6E8760011B633 /* SpeedtestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22120DD32BC6E8760011B633 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22120DDE2BC6E8760011B633 /* SpeedtestUITestsLaunchTests.swift in Sources */,
+				22120DDC2BC6E8760011B633 /* SpeedtestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22120DCF2BC6E8760011B633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22120DBC2BC6E8750011B633 /* Speedtest */;
+			targetProxy = 22120DCE2BC6E8760011B633 /* PBXContainerItemProxy */;
+		};
+		22120DD92BC6E8760011B633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22120DBC2BC6E8750011B633 /* Speedtest */;
+			targetProxy = 22120DD82BC6E8760011B633 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22120DDF2BC6E8760011B633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22120DE02BC6E8760011B633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22120DE22BC6E8760011B633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Speedtest/Preview Content\"";
+				DEVELOPMENT_TEAM = DLJS4H3K84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.Speedtest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22120DE32BC6E8760011B633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Speedtest/Preview Content\"";
+				DEVELOPMENT_TEAM = DLJS4H3K84;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.Speedtest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22120DE52BC6E8760011B633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.SpeedtestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speedtest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Speedtest";
+			};
+			name = Debug;
+		};
+		22120DE62BC6E8760011B633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.SpeedtestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Speedtest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Speedtest";
+			};
+			name = Release;
+		};
+		22120DE82BC6E8760011B633 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.SpeedtestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Speedtest;
+			};
+			name = Debug;
+		};
+		22120DE92BC6E8760011B633 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.SpeedtestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Speedtest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22120DB82BC6E8750011B633 /* Build configuration list for PBXProject "Speedtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22120DDF2BC6E8760011B633 /* Debug */,
+				22120DE02BC6E8760011B633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22120DE12BC6E8760011B633 /* Build configuration list for PBXNativeTarget "Speedtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22120DE22BC6E8760011B633 /* Debug */,
+				22120DE32BC6E8760011B633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22120DE42BC6E8760011B633 /* Build configuration list for PBXNativeTarget "SpeedtestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22120DE52BC6E8760011B633 /* Debug */,
+				22120DE62BC6E8760011B633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22120DE72BC6E8760011B633 /* Build configuration list for PBXNativeTarget "SpeedtestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22120DE82BC6E8760011B633 /* Debug */,
+				22120DE92BC6E8760011B633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22FD449A2BC859BD006E50C8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22B0643F2BC85A4F00393759 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22FD449A2BC859BD006E50C8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		22B064412BC85A4F00393759 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22FD449A2BC859BD006E50C8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		22086E3D2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22086E3E2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodel */,
+			);
+			currentVersion = 22086E3E2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodel */;
+			path = SpeedtestDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 22120DB52BC6E8750011B633 /* Project object */;
+}
