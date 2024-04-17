@@ -43,6 +43,9 @@ struct StartButtonContentView: View {
                 viewModel.alertHide()
             }))
         }
+        .onAppear() {
+            viewModel.clean()
+        }
     }
 }
 

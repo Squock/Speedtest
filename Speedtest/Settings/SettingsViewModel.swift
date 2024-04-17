@@ -24,6 +24,11 @@ struct SettingsDataSource {
     var selectedCheckBox: [SpeedCheckBox]
 }
 
+enum SettingsError {
+    case none
+    case invalidURL
+}
+
 // MARK: - Окно настроек
 
 class SettingsViewModel: ObservableObject {
@@ -32,6 +37,7 @@ class SettingsViewModel: ObservableObject {
     @Published var checkBox: [SpeedCheckBox] // Массив типов измерения скорости
     @Published var isDownloadSpeedToggled: Bool
     @Published var isUploadSpeedToggled: Bool
+    @Published var error: SettingsError
     private let appDelegate: SpeedtestAppViewModelLogic
     private let settingsStore: SettingsStoreRepositoryLogic
 
@@ -46,6 +52,7 @@ class SettingsViewModel: ObservableObject {
         self.checkBox = checkBox
         self.appDelegate = appDelegate
         self.settingsStore = settingsStore
+        self.error = .none
         isDownloadSpeedToggled = settingsStore.getDownloadSpeed()
         isUploadSpeedToggled = settingsStore.getUploadSpeed()
     }
@@ -63,11 +70,13 @@ class SettingsViewModel: ObservableObject {
     }
 
     func setAddressURL(with value: String) {
-        guard isValidHTTPURL(value) else {
-            return
+        if isValidHTTPURL(value) {
+            settingsStore.setURL(with: value)
+            url = value
+            error = .none
+        } else {
+            error = .invalidURL
         }
-        settingsStore.setURL(with: value)
-        url = value
     }
 
     func downloadSpeedEnabled(isEnabled: Bool) {
@@ -78,9 +87,13 @@ class SettingsViewModel: ObservableObject {
         settingsStore.setUploadSpeed(with: isEnabled)
     }
 
+    func alertHide() {
+        error = .none
+    }
+
     // Валидация на корректность ввода адреса URL
     private func isValidHTTPURL(_ urlString: String) -> Bool {
-        let urlRegex = #"(?i)^https?://(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:/[\w-./?%&=]*)?$"#
+        let urlRegex = #"(?i)^(https?://)?(?:www\.)?[a-z0-9-]+\.[a-z]{2,}(?:/[\w-./?%&=]*)?$"#
         let urlPredicate = NSPredicate(format: "SELF MATCHES %@", urlRegex)
         return urlPredicate.evaluate(with: urlString)
     }

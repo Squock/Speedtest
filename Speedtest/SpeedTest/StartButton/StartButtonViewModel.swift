@@ -42,6 +42,10 @@ class StartButtonModel: ObservableObject {
         }
     }
 
+    func clean() {
+        isPressed = false
+    }
+
     func alertHide() {
         error = .none
     }

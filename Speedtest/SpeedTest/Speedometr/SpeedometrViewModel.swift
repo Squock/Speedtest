@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 // Константы для спидометра
 enum SpeedometrViewConstants {
@@ -53,6 +54,7 @@ final class SpeedometrViewModel: ObservableObject  {
     @Published var downloadSpeed: String = ""
     @Published var uploadSpeed: String = ""
     @Published var router: SpeedometrViewRouter
+    @Published var resultViewModel: ResultViewModel
 
     init(
         networkSpeedRepository: NetworkSpeedRepositoryLogic = NetworkSpeedRepository(dataSource: .init(url: SettingsStore.shared.getURL())),
@@ -60,7 +62,8 @@ final class SpeedometrViewModel: ObservableObject  {
         circleValue: Double = SpeedometrViewConstants.circleMinimum,
         speedometrValue: String = "",
         dataSource: SpeedometrViewDataSource = .init(),
-        settingsStore: SettingsStoreRepositoryLogic = SettingsStoreRepository()
+        settingsStore: SettingsStoreRepositoryLogic = SettingsStoreRepository(),
+        resultViewModel: ResultViewModel = .init()
     ) {
         self.router = .main
         self.networkSpeedRepository = networkSpeedRepository
@@ -70,6 +73,7 @@ final class SpeedometrViewModel: ObservableObject  {
         self.dataSource = dataSource
         self.domainURL = dataSource.domainURL
         self.settingsStore = settingsStore
+        self.resultViewModel = resultViewModel
     }
 
     func start() {
@@ -139,7 +143,8 @@ private extension SpeedometrViewModel {
 
 private extension SpeedometrViewModel {
     func clean() {
-        
+        resultViewModel.downloadText = downloadSpeed
+        resultViewModel.uploadText = uploadSpeed
         arrowValue = SpeedometrViewConstants.arrowDegressMinimum
         circleValue = SpeedometrViewConstants.circleMinimum
     }

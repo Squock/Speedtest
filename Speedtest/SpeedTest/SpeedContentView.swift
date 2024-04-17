@@ -22,22 +22,20 @@ struct SpeedContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
-                switch viewModel.viewType {
-                case .speedometr:
-                    if isSpeedometrVisible {
-                        SpeedometrContentView()
-                    }
-                case .start:
-                    StartButtonContentView(viewModel: viewModel.startViewModel)
+            VStack {
+                NavigationLink(destination: SpeedometrContentView(), isActive: $isSpeedometrVisible) {
+                    EmptyView()
                 }
+                .frame(width: 0, height: 0)
+                .opacity(0)
+                StartButtonContentView(viewModel: viewModel.startViewModel)
             }
             .navigationTitle(localization.title)
-            .onReceive(viewModel.objectWillChange, perform: { _ in
+            .onReceive(viewModel.objectWillChange) { _ in
                 withAnimation {
                     self.isSpeedometrVisible = self.viewModel.startViewModel.isPressed
                 }
-            })
+            }
         }
     }
 }

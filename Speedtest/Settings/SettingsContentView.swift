@@ -67,6 +67,15 @@ struct SettingsContentView: View {
                             viewModel.uploadSpeedEnabled(isEnabled: newValue)
                         })
             Spacer()
+        }.alert(isPresented: Binding<Bool>(
+            get: { self.viewModel.error == .invalidURL },
+            set: { _ in }
+        )) {
+            Alert(title: Text("Ошибка"),
+                  message: Text("Необходимо ввести валидный URL адрес"),
+                  dismissButton: .cancel(Text("OK"), action: {
+                viewModel.alertHide()
+            }))
         }
     }
 }

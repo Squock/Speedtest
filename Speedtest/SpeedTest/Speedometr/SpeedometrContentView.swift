@@ -12,6 +12,7 @@ struct SpeedometrContentView: View {
 
     init(viewModel: SpeedometrViewModel = .init()) {
         self.viewModel = viewModel
+        viewModel.start()
     }
 
     var body: some View {
@@ -53,9 +54,6 @@ struct SpeedometrContentView: View {
                 .rotationEffect(.init(degrees: viewModel.arrowValue + 235))
                 .animation(.easeOut, value: viewModel.arrowValue)
             }
-        }
-        .onAppear {
-            viewModel.start()
         }
     }
 }

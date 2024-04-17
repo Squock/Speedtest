@@ -18,6 +18,7 @@
 		22120DEB2BC6F3750011B633 /* SpeedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DEA2BC6F3750011B633 /* SpeedContentView.swift */; };
 		22120DEF2BC6F4CA0011B633 /* SettingsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DEE2BC6F4CA0011B633 /* SettingsContentView.swift */; };
 		22120DF22BC72C610011B633 /* SpeedometrContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22120DF12BC72C610011B633 /* SpeedometrContentView.swift */; };
+		221AD77E2BCFBA180089F42F /* ResultLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221AD77D2BCFBA180089F42F /* ResultLocalization.swift */; };
 		225AE7DF2BCD2E57005C95F8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225AE7DE2BCD2E57005C95F8 /* ResultView.swift */; };
 		225AE7E12BCD2EB5005C95F8 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */; };
 		22B064402BC85A4F00393759 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 22B0643F2BC85A4F00393759 /* Alamofire */; };
@@ -72,6 +73,7 @@
 		22120DEA2BC6F3750011B633 /* SpeedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedContentView.swift; sourceTree = "<group>"; };
 		22120DEE2BC6F4CA0011B633 /* SettingsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContentView.swift; sourceTree = "<group>"; };
 		22120DF12BC72C610011B633 /* SpeedometrContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometrContentView.swift; sourceTree = "<group>"; };
+		221AD77D2BCFBA180089F42F /* ResultLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLocalization.swift; sourceTree = "<group>"; };
 		225AE7DE2BCD2E57005C95F8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		22B064432BC85B3E00393759 /* SpeedometrViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometrViewModel.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				225AE7DE2BCD2E57005C95F8 /* ResultView.swift */,
 				225AE7E02BCD2EB5005C95F8 /* ResultViewModel.swift */,
+				221AD77D2BCFBA180089F42F /* ResultLocalization.swift */,
 			);
 			path = ResultView;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				225AE7DF2BCD2E57005C95F8 /* ResultView.swift in Sources */,
 				22120DC32BC6E8750011B633 /* MainContentView.swift in Sources */,
 				22086E3F2BCD01F40020BFD8 /* SpeedtestDataModel.xcdatamodeld in Sources */,
+				221AD77E2BCFBA180089F42F /* ResultLocalization.swift in Sources */,
 				22120DC12BC6E8750011B633 /* SpeedtestApp.swift in Sources */,
 				22B0644D2BCBDA1B00393759 /* SettingsStore.swift in Sources */,
 				22120DF22BC72C610011B633 /* SpeedometrContentView.swift in Sources */,
